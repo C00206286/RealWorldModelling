@@ -1,7 +1,7 @@
 /*! running_total v0.0.0 - MIT license */
 'use strict';
-var total;
-var input;
+var total = 0;
+var input = 0;
 
 var running_total = function (input) {
   // your code goes here
