@@ -1,11 +1,12 @@
-/*! running_total v0.0.0 - MIT license */
+/*! running_total v1.1.0 - MIT license */
 'use strict';
-var total = 0;
-var input = 0;
 
 var running_total = function (input) {
-  // your code goes here
-  total = input + total;
+  var total = 0;
+
+  input.forEach(element => {
+    total += element
+  });
   return total;
 }
 
