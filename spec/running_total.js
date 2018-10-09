@@ -11,25 +11,18 @@ describe('running_total()', function () {
 
   });
 
-  it('add 6', function () {
-    expect(running_total(6)).to.equal(6);
+  it('works', function () {
+    expect(running_total([4,2,8,3,9,4,10,5,11,6])).to.deep.equal([4,6,14,17,26,30,40,45,56,62]);
   });
-  it('add 2', function () {
-    expect(running_total(2)).to.equal(8);
+  it('works with one', function () {
+    expect(running_total([2])).to.deep.equal([2]);
   });
-  it('add 10', function () {
-    expect(running_total(10)).to.equal(18);
+  it('empty list', function () {
+    expect(running_total([])).to.deep.equal([]);
   });
-  it('add -6', function () {
-    expect(running_total(-6)).to.equal(12);
+  it('negative', function () {
+    expect(running_total([-4,-2,8,3])).to.deep.equal([-4,-6,2,5]);
   });
-  it('add -12', function () {
-    expect(running_total(-12)).to.equal(0);
-  });
-  it('add -12', function () {
-    expect(running_total(-12)).to.equal(-12);
-  });
-
 
 
   // Add more assertions here
