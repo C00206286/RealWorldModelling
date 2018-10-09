@@ -3,11 +3,13 @@
 
 var running_total = function (input) {
   var total = 0;
+  var list = []
 
   input.forEach(element => {
     total += element
+    list.push(total)
   });
-  return total;
+  return list;
 }
 
 if ( typeof module !== "undefined" ) {

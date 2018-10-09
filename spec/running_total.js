@@ -12,10 +12,10 @@ describe('running_total()', function () {
   });
 
   it('[1, 2, 3]', function () {
-    expect(running_total([1, 2, 3])).to.equal(6);
+    expect(running_total([1, 2, 3])).to.deep.equal([1, 3, 6]);
   });
   
   it('[-1, -5, -6]', function () {
-    expect(running_total([-1, -5, -6])).to.equal(-12);
+    expect(running_total([-1, -5, -6])).to.deep.equal([-1, -6, -12]);
   });
 });
