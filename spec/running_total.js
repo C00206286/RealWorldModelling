@@ -11,26 +11,11 @@ describe('running_total()', function () {
 
   });
 
-  it('add 6', function () {
-    expect(running_total(6)).to.equal(6);
+  it('[1, 2, 3]', function () {
+    expect(running_total([1, 2, 3])).to.deep.equal([1, 3, 6]);
   });
-  it('add 2', function () {
-    expect(running_total(2)).to.equal(8);
+  
+  it('[-1, -5, -6]', function () {
+    expect(running_total([-1, -5, -6])).to.deep.equal([-1, -6, -12]);
   });
-  it('add 10', function () {
-    expect(running_total(10)).to.equal(18);
-  });
-  it('add -6', function () {
-    expect(running_total(-6)).to.equal(12);
-  });
-  it('add -12', function () {
-    expect(running_total(-12)).to.equal(0);
-  });
-  it('add -12', function () {
-    expect(running_total(-12)).to.equal(-12);
-  });
-
-
-
-  // Add more assertions here
 });
